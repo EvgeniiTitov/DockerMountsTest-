@@ -1,5 +1,5 @@
-/source
-/result
+/source/**
+/result/**
 /venv
 __pycache__
 *.pyc
