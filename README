@@ -1,4 +1,4 @@
-Dasha, to run the thing, we need to make sure that we can communicate with the
+To run the thing, we need to make sure that we can communicate with the
 isolated docker container. We need to be able to:
 1. Provide images to process
 2. Get the results back
@@ -9,5 +9,5 @@ the container (the one where the code expects to find images).
 The same needs to be done with the folder where results will be saved.
 
 Pull the image, run with:
-``docke run --rm -it -v path/to/images/onyour/machine:/app/source 
--v path/to/where/find/results/onyour/machine:/app/result <image_name:tag>``
+``docke run --rm -it -v <PATH/TO/IMAGES>:/app/source 
+-v <PATH/TO/SAVE/RESULTS>:/app/result <image_name:tag>``
