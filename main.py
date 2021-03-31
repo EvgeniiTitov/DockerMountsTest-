@@ -18,7 +18,7 @@ def get_items_to_process() -> typing.Generator:
             yield os.path.join("source", filename)
 
 
-def main():
+def main() -> int:
     try:
         model = ComponentsModel()
     except Exception as e:
@@ -35,6 +35,8 @@ def main():
         image_name = os.path.basename(item)
         cv2.imwrite(os.path.join("result", image_name), image)
         print("Processed image:", image_name)
+
+    return 0
 
 
 if __name__ == "__main__":
